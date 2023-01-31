@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF=8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ATM</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>ATM</h1>
+    <script>
+      var money = parseInt(prompt("How Much Would You Like To Withdraw?"));
+      console.log("User entered:$ ", money);
+      var sum = money
+
+      var hundred = Math.floor(money / 100);
+      money = money % 100;
+
+      var fifty = Math.floor(money / 50);
+      money = money % 50;
+
+      var twenty = Math.floor(money / 20);
+      money = money % 20;
+
+      var ten = Math.floor(money / 10);
+      money - money % 10;
+
+      var five = Math.floor(money / 5);
+      money = money % 5;
+    
+
+
+      const html = `<p><label>Withdrawl Amount: $&nbsp;</label>${sum}</p>
+      <p><label># Of 100's:&nbsp;</label>${hundred}</p>
+      <p><label># Of 50's:&nbsp;</label>${fifty}</p>
+      <p><label># Of 20's:&nbsp;</label>${twenty}</p>
+      <p><label># Of 10's:&nbsp;</label>${ten}</p>
+      <p><label># Of 5's:&nbsp;</label>${five}</p>`;
+
+      document.write(html);
+    </script>
+    <button type="submit" onclick="location.reload()">Reset</button>
+  </body>
+</html>
